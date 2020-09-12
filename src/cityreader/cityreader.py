@@ -118,9 +118,10 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
       if left_lat > city_lat > right_lat and left_lon < city_lon < right_lon:
         within.append(city)
 
+
   return within
 
-  included_cities = cityreader_stretch(lat_first, lon_first, lat_second, lon_second, cities)
+included_cities = cityreader_stretch(lat_first, lon_first, lat_second, lon_second, cities)
 
-  for city in included_cities:
-    print(city)
+for city in included_cities:
+  print(city)
