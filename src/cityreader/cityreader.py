@@ -7,6 +7,9 @@ class City:
       self.lat = lat
       self.lon = lon
 
+  def __repr__(self):
+    return f"City({repr(self.name)}, {self.lat}, {self.lon})"
+
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
 #
@@ -21,6 +24,7 @@ class City:
 # should not be loaded into a City object.
 cities = []
 
+import csv
 def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # Ensure that the lat and lon valuse are all floats
